@@ -1,0 +1,17 @@
+name: Test Project
+on: push
+jobs:
+  test:
+    run-on: ubuntu-latest
+    step:
+      - name: Get Code
+        uses: action/checkout@v3
+      #  with: for this we don't need the configuration
+      - name: Install Nodejs
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - name: Install Dependenices
+        run: npm ci
+      - name: Run Test
+        run: npm test
