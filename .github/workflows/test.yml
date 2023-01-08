@@ -2,7 +2,7 @@ name: Test Project
 on: push
 jobs:
   test:
-    run-on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Get Code
         uses: action/checkout@v3
@@ -12,5 +12,5 @@ jobs:
           node-version: 16
       - name: Install Dependenices
         run: npm ci
-      - name: Run Test
+      - name: Run tests
         run: npm test
