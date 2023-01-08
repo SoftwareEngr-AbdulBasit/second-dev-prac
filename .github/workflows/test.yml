@@ -6,7 +6,6 @@ jobs:
     steps:
       - name: Get Code
         uses: action/checkout@v3
-      #  with: for this we don't need the configuration
       - name: Install Nodejs
         uses: actions/setup-node@v3
         with:
